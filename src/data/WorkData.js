@@ -54,7 +54,7 @@ export const Work = [
         description:"A landing page for a financial firm, which utilizes smooth scroll for navigation.",
         tags:["react|", "JS|", "styled-components|", "react-scroll"],
         
-        demo:"https://dolla-nine.vercel.app",
+        demo:"//dolla-nine.vercel.app",
         github:"//github.com/IamAnderson/Dolla"
     },    
 ] 
