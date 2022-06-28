@@ -42,6 +42,8 @@ const Main = styled.div`
 
   @media screen and (max-width: 500px){
     height: 54vh;
+    flex-wrap: wrap;
+    flex-grow: 0.4;
   }
 `
 
@@ -67,6 +69,16 @@ const Title = styled.h2`
 `
 
 const Description = styled.h2`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-size: calc(0.6em + 1vw);
+  padding: 0.5rem 0 0.5rem 0rem;
+
+`
+
+const SkillS = styled.h2`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -103,13 +115,13 @@ const SkillsPage = () => {
           <p style={{marginLeft: '2rem'}}>HTML / CSS | JavaScript | TypeScript | React | Redux | BootStrap | SASS | Tailwind</p>
         </Description>
 
-        <Description>
+        <SkillS>
           <h3 style={{fontWeight: '600', marginBottom: '1rem', textTransform: 'uppercase'}}>
             Tools
           </h3>
 
           <p style={{marginLeft: '2rem'}}>VsCode, Github, etc.</p>
-        </Description>
+        </SkillS>
         </Main>
       </Box>
     </ThemeProvider>
