@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme } from './Themes'
-import { Design, Develope } from './AllSvgs'
+// import { Design, Develope } from './AllSvgs'
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
@@ -63,15 +63,14 @@ const SpaceMan = styled.div`
   }
 `
 
-const Description = styled.h2`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  font-size: calc(0.6em + 1vw);
-  padding: 0.5rem 0 0.5rem 0rem;
-
-`
+// const Description = styled.h2`
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   align-items: flex-start;
+//   font-size: calc(0.6em + 1vw);
+//   padding: 0.5rem 0 0.5rem 0rem;
+// `
 
 const AboutPage = () => {
   return (
@@ -84,7 +83,7 @@ const AboutPage = () => {
         <BigTitle Text='ABOUT'/>
 
         <Main>
-        I'm a front-end developer from Nigeria. I love creating websites while keeping codes organized and simple.
+        I'm a full stack developer ( MERNapp ) from Nigeria. I love creating websites while keeping codes organized and simple.
         <br /> <br /> 
         I very much enjoy the process of web creation, especially the aspect that deals with user experience. I love discovering new things, and exploring new experiences. 
         <br /> <br />

@@ -12,6 +12,7 @@ import { YinYang } from './AllSvgs'
 import TitleAgain from '../subComponents/TitleAgain'
 import { motion } from 'framer-motion'
 import { NavLink } from 'react-router-dom'
+import { Work1 } from '../data/WorkData1'
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -47,7 +48,7 @@ const Main = styled(motion.ul)`
       text-decoration: none;
       z-index: 10;
 
-      padding: 0.5rem 1.5rem;
+      padding: 0.25rem 0.75rem;
       border: 1px solid #fff;
 
       cursor: pointer;
@@ -79,7 +80,7 @@ const container = {
 }
 
 
-const WorkPage = () => {
+const MoreWorkPage = () => {
 
   const ref = useRef(null);
   const yinyang = useRef(null);
@@ -109,7 +110,7 @@ const WorkPage = () => {
         <Main ref={ref} variants={container} initial='hidden' animate='show'>
           <>
           {
-            Work.map((work, index) => {
+            Work1.map((work, index) => {
               return(
                 <>
                   <Card id={work.id} name={work.name} description={work.description} tags={work.tags} demo={work.demo} github={work.github} key={index}/>
@@ -119,7 +120,7 @@ const WorkPage = () => {
           }
           </>
           <div className='More_Btn'>
-            <NavLink to="/Morework" className="more_work__link">MORE</NavLink>
+            <NavLink to="/Work" className="more_work__link">PREV</NavLink>
           </div>
         </Main>
 
@@ -133,4 +134,4 @@ const WorkPage = () => {
   )
 }
 
-export default WorkPage
+export default MoreWorkPage

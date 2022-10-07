@@ -7,7 +7,7 @@ import { Github } from '../Components/AllSvgs';
 
 const Box = styled(motion.li)`
     width: 16rem;
-    height: 40vh;
+    height: 48vh;
     background-color: ${props => props.theme.text};
     color: ${props => props.theme.body};
     padding: 1.5rem 2rem;
@@ -17,7 +17,7 @@ const Box = styled(motion.li)`
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     align-items: center;
 
     &:hover{
@@ -26,12 +26,39 @@ const Box = styled(motion.li)`
         color: ${props => props.theme.text};
         border: 2px solid ${props => props.theme.text};
     }
+
+    .Title{
+        display: flex;
+        align-items: center;
+    }
+
+    .Description{
+        display: flex;
+        align-items: center;
+
+        border-bottom: 2px solid ${props => props.theme.body};
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .Tag{
+        width: 100%;
+        margin-bottom: 1rem;
+        
+        .Tag_Div{
+            display: flex;
+            flex-direction: column;   
+            align-items: flex-start;
+        }
+    }
 `
 
 const Links = styled.div`
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+
+    margin-bottom: 2rem;
 `
 
 const Link = styled(NavLink)`
@@ -94,17 +121,18 @@ const Card = ({ id, name, description, tags, demo, github }) => {
             </p>
         </div>
         
-        <div className='Tag' style={{ borderTop: '2px solid #000', width: '100%', marginTop: '1rem'}}>
-           
+        <div className='Tag'>
+            <div className='Tag_Div'>
                 {tags.map(( t, index ) => {
                     return(
                         <p style={{fontWeight: '500', fontSize: '18px'}} key={index}>#{t}</p>
                     )
                 })}
+            </div>
         </div>
         
         <Links>
-            <Link to={{pathname: `${demo}`}} style={{marginTop: '1rem'}} target='_blank'>
+            <Link to={{pathname: `${demo}`}} target='_blank'>
                     Visit
             </Link>
             
