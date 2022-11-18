@@ -72,6 +72,6 @@ export const Work = [
         tags:["react", "JS", "styled-components", "react-scroll"],
         
         demo:"//dolla-nine.vercel.app",
-        github:"//github.com/IamAnderson/Dollua"
+        github:"//github.com/IamAnderson/Dolla"
     },  
 ] 
