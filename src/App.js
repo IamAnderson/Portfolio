@@ -10,7 +10,7 @@ import WorkPage from './Components/WorkPage';
 import SkillsPage from './Components/SkillsPage';
 import { AnimatePresence } from 'framer-motion';
 import SoundBar from './subComponents/SoundBar';
-import MoreWorkPage from './Components/MoreWorkPage';
+// import MoreWorkPage from './Components/MoreWorkPage';
 
 
 
