@@ -23,7 +23,7 @@ export const Work = [
         description: "A website for an engineering firm. The client side is built with react, while the API is built with node and express.",
         tags: ["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
 
-        demo:"//geoleum.vercel.app",
+        demo:"//geoleum123.vercel.app",
         github:"//github.com/IamAnderson/geoleum1"
     },
     {
@@ -55,13 +55,23 @@ export const Work = [
         github:"//github.com/IamAnderson/27-E-Commerce-"
     },
 
-    // {
-    //     id:7,
-    //     name:"GPT-3",
-    //     description:"A landing page for an AI company.",
-    //     tags:["react", "JS", "styled-components", "Animation"],
+    {
+        id:7,
+        name:"GPT-3",
+        description:"A landing page for an AI company, built with React and framer motion for animation.",
+        tags:["react", "JS", "styled-components", "Animation"],
         
-    //     demo:"//gpt-3-inky.vercel.app",
-    //     github:"//github.com/IamAnderson/GPT3"
-    // },
+        demo:"//gpt-3-inky.vercel.app",
+        github:"//github.com/IamAnderson/GPT3"
+    },
+
+    {
+        id:8,
+        name:"Dolla",
+        description:"A landing page for a financial firm, which utilize smooth scroll for navigation.",
+        tags:["react", "JS", "styled-components", "react-scroll"],
+        
+        demo:"//dolla-nine.vercel.app",
+        github:"//github.com/IamAnderson/Dolla"
+    },  
 ] 
