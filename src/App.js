@@ -1,7 +1,7 @@
 import './App.css';
 import GlobalStyle from './globalStyles'
 import { ThemeProvider } from 'styled-components';
-import { lightTheme, darkTheme } from './Components/Themes'
+import { lightTheme } from './Components/Themes'
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import AboutPage from './Components/AboutPage';
 import Main from './Components/Main';
