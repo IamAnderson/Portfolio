@@ -10,7 +10,6 @@ import WorkPage from './Components/WorkPage';
 import SkillsPage from './Components/SkillsPage';
 import { AnimatePresence } from 'framer-motion';
 import SoundBar from './subComponents/SoundBar';
-// import MoreWorkPage from './Components/MoreWorkPage';
 
 
 
@@ -30,7 +29,6 @@ function App() {
             <Route path='/Blog' element={ < BlogPage/> } exact/>
             <Route path='/Work' element={ <WorkPage /> } exact/>
             <Route path='/Skills' element={ < SkillsPage/> } exact/>
-//             <Route path='/Morework' element={ < MoreWorkPage/> } exact/>
           </Routes>
 
         </Router>
