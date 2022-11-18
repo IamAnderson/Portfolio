@@ -8,50 +8,31 @@ import PowerButton from '../subComponents/PowerButton'
 import { Work } from '../data/WorkData'
 import Card from '../subComponents/Card'
 import { YinYang } from './AllSvgs'
-// import BigTitle from '../subComponents/BigTitle'
 import TitleAgain from '../subComponents/TitleAgain'
-import { motion } from 'framer-motion'
-import { NavLink } from 'react-router-dom'
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
-  height: 400vh;
+  /* height: 400vh; */
+  height: 100vh;
   position: relative;
   overflow: hidden;
 `
 
-const Main = styled(motion.ul)`
+const Main = styled.div`
   position: fixed;
   top: 12rem;
-  left: calc(10rem + 15vw);
-  /* left: calc(50vw * 70%); */
-  height: 40vh;
+  left: calc(5rem + 10vw);
+  height: 60vh;
   display: flex;
 
-  .More_Btn{
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    width: 5%;
-    z-index: 10;
+  overflow-x: scroll;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  width: 120vw;
 
-    .more_work__link{
-      display: inline-block;
-      color: #fff;
-      font-family: 'Pacifico', cursive;
-      font-size: 2rem;
-      font-weight: 700;
-      position: fixed;
-      right: 2rem;
-      top: 2rem;
-      text-decoration: none;
-      z-index: 10;
-
-      padding: 0.5rem 1.5rem;
-      border: 1px solid #fff;
-
-      cursor: pointer;
-    }
+  &::-webkit-scrollbar{
+    display: none;
   }
 `
 
@@ -63,6 +44,31 @@ const Rotate = styled.div`
   width: 80px;
   height: 80px;
   z-index: 1;
+`
+
+const IconDiv = styled.div`
+  font-size: 3rem;
+  color: #fff;
+
+  @media screen and (max-width: 985px) {
+    display: none;
+  }
+  
+  .left{
+    cursor: pointer;
+    z-index: 45;
+    position: fixed;
+    top: 10%;
+    left: 15%;
+  }
+
+  .right{
+    cursor: pointer;
+    z-index: 45;
+    position: fixed;
+    top: 10%;
+    right: 15%;
+  }
 `
 
 
@@ -81,16 +87,21 @@ const container = {
 
 const WorkPage = () => {
 
-  const ref = useRef(null);
+  const slideLeft = () => {
+    var slider = document.getElementById("slider__");
+    slider.scrollLeft = slider.scrollLeft - 500;
+  }
+
+  const slideRight = () => {
+    var slider = document.getElementById("slider__");
+    slider.scrollLeft = slider.scrollLeft + 500;
+  }
+
   const yinyang = useRef(null);
 
-
   useEffect(() => {
-    let element = ref.current;
 
     const rotate = () => {
-      element.style.transform = `translateX(${-window.pageYOffset}px)`
-
       yinyang.current.style.transform = `rotate(` + -window.pageYOffset + 'deg)' 
     }
 
@@ -106,21 +117,26 @@ const WorkPage = () => {
         <SocialIcons theme="dark" />
         <PowerButton />
 
-        <Main ref={ref} variants={container} initial='hidden' animate='show'>
-          <>
+        <Main variants={container} id="slider__" initial='hidden' animate='show'>
+          <IconDiv>
+            <div className='left' onClick={slideLeft}>
+              <FaArrowLeft />
+            </div>
+            <div className='right' onClick={slideRight}>
+              <FaArrowRight />
+            </div>
+          </IconDiv>
           {
             Work.map((work, index) => {
               return(
                 <>
-                  <Card id={work.id} name={work.name} description={work.description} tags={work.tags} demo={work.demo} github={work.github} key={index}/>
+                    <div className='card__div'>
+                      <Card id={work.id} name={work.name} description={work.description} tags={work.tags} demo={work.demo} github={work.github} key={index}/>
+                    </div>
                 </>
               )
             })
           }
-          </>
-          <div className='More_Btn'>
-            <NavLink to="/Morework" className="more_work__link">MORE</NavLink>
-          </div>
         </Main>
 
         <Rotate ref={yinyang}>
