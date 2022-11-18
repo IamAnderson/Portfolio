@@ -27,7 +27,6 @@ const Main = styled.div`
   display: flex;
 
   overflow-x: scroll;
-  white-space: nowrap;
   scroll-behavior: smooth;
   width: 120vw;
 
