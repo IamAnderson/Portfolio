@@ -83,11 +83,13 @@ const AboutPage = () => {
         <BigTitle Text='ABOUT'/>
 
         <Main>
-        I'm a full stack developer ( MERNapp ) from Nigeria. I love creating websites while keeping codes organized and simple.
+        I'm a full stack developer ( MERNSTACK ) from Nigeria. I love creating websites while keeping codes organized and simple.
         <br /> <br /> 
         I very much enjoy the process of web creation, especially the aspect that deals with user experience. I love discovering new things, and exploring new experiences. 
         <br /> <br />
         You can connect with me via social links.
+        <br /> <br />
+        Email me at: omorogbeandersonsimeon@gmail.com 
         </Main>
 
         <SpaceMan>
