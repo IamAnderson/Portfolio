@@ -30,7 +30,7 @@ function App() {
             <Route path='/Blog' element={ < BlogPage/> } exact/>
             <Route path='/Work' element={ <WorkPage /> } exact/>
             <Route path='/Skills' element={ < SkillsPage/> } exact/>
-            <Route path='/Morework' element={ < MoreWorkPage/> } exact/>
+//             <Route path='/Morework' element={ < MoreWorkPage/> } exact/>
           </Routes>
 
         </Router>
