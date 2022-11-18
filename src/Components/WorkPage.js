@@ -28,7 +28,7 @@ const Main = styled.div`
 
   overflow-x: scroll;
   scroll-behavior: smooth;
-  width: 140vw;
+  width: 110vw;
 
   &::-webkit-scrollbar{
     display: none;
