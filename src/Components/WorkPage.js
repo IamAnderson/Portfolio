@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme } from './Themes'
 import LogoComponent from '../subComponents/LogoComponent'
@@ -9,7 +9,7 @@ import { Work } from '../data/WorkData'
 import Card from '../subComponents/Card'
 import { YinYang } from './AllSvgs'
 import TitleAgain from '../subComponents/TitleAgain'
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa"
+import { FaChevronCircleLeft, FaChevronCircleRight } from "react-icons/fa"
 
 const Box = styled.div`
   background-color: ${props => props.theme.body};
@@ -28,10 +28,19 @@ const Main = styled.div`
 
   overflow-x: scroll;
   scroll-behavior: smooth;
-  width: 110vw;
+  width: 90vw;
 
   &::-webkit-scrollbar{
     display: none;
+  }
+`
+const rotate = keyframes`
+  from{
+    transform: rotate(0);
+  }
+
+  to{
+    transform: rotate(360deg);
   }
 `
 
@@ -43,6 +52,8 @@ const Rotate = styled.div`
   width: 80px;
   height: 80px;
   z-index: 1;
+
+  animation: ${rotate} 1.5s infinite;
 `
 
 const IconDiv = styled.div`
@@ -57,7 +68,7 @@ const IconDiv = styled.div`
     cursor: pointer;
     z-index: 45;
     position: fixed;
-    top: 10%;
+    top: 17%;
     left: 15%;
   }
 
@@ -65,7 +76,7 @@ const IconDiv = styled.div`
     cursor: pointer;
     z-index: 45;
     position: fixed;
-    top: 10%;
+    top: 17%;
     right: 15%;
   }
 `
@@ -84,30 +95,20 @@ const container = {
 }
 
 
+
+
 const WorkPage = () => {
 
   const slideLeft = () => {
     var slider = document.getElementById("slider__");
     slider.scrollLeft = slider.scrollLeft - 500;
-  }
+  };
 
   const slideRight = () => {
     var slider = document.getElementById("slider__");
     slider.scrollLeft = slider.scrollLeft + 500;
-  }
+  };
 
-  const yinyang = useRef(null);
-
-  useEffect(() => {
-
-    const rotate = () => {
-      yinyang.current.style.transform = `rotate(` + -window.pageYOffset + 'deg)' 
-    }
-
-    window.addEventListener('scroll', rotate)
-
-    return () => window.removeEventListener('scroll', rotate)
-  }, [])
 
   return (
     <ThemeProvider theme={darkTheme}>
@@ -119,10 +120,10 @@ const WorkPage = () => {
         <Main variants={container} id="slider__" initial='hidden' animate='show'>
           <IconDiv>
             <div className='left' onClick={slideLeft}>
-              <FaArrowLeft />
+              <FaChevronCircleLeft />
             </div>
             <div className='right' onClick={slideRight}>
-              <FaArrowRight />
+              <FaChevronCircleRight />
             </div>
           </IconDiv>
           {
@@ -138,7 +139,7 @@ const WorkPage = () => {
           }
         </Main>
 
-        <Rotate ref={yinyang}>
+        <Rotate>
           <YinYang width={80} height={80} fill={darkTheme.text} />
         </Rotate>
 

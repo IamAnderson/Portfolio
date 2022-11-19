@@ -138,12 +138,7 @@ const DarkDiv = styled.div`
 `
 
 
-const Main = () => {
-
-const [click, setClick] = useState(false);
-const handleClick = () => {
-  setClick(!click)
-}
+const Main = ({ click, handleClick }) => {
 
   return (
     <>
@@ -187,7 +182,7 @@ const handleClick = () => {
                 scale: 0.9
               }}
               >
-                Say hi...
+                <NavLink to="/SayHi" style={{textDecoration: "none", color: "#000"}}>Say hi...</NavLink>
               </motion.h2> 
             </Contact>
 
@@ -252,7 +247,7 @@ const handleClick = () => {
                 </motion.h3>
               </About>
 
-              <Skills to='/Skills'>
+              <Skills style={{zIndex: "2"}} to='/Skills'>
                 <motion.h3
               initial={{
                 y: 200,

@@ -25,7 +25,7 @@ const Main = styled.div`
   color: ${props => props.theme.text};
   padding: 2rem;
   width: 30vw;
-  height: 60vh;
+  height: 64vh;
   z-index: 3;
   line-height: 1.5;
   
@@ -55,7 +55,7 @@ const Title = styled.h2`
 
   ${Main} :hover &{
     &>*{
-      fill: ${props => props.theme.body};
+      fill: #fff;
     }
 
     @media screen and (max-width: 500px){
@@ -112,7 +112,7 @@ const SkillsPage = () => {
             Skills
           </h3>
 
-          <p style={{marginLeft: '2rem'}}>HTML / CSS | JavaScript | TypeScript | React | Redux | BootStrap | SASS | Tailwind</p>
+          <p style={{marginLeft: '2rem'}}>HTML / CSS | JavaScript | TypeScript | React | Redux | Styled-Components | SASS | Tailwind</p>
         </Description>
 
         <SkillS>

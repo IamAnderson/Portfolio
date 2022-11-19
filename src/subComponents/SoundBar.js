@@ -5,11 +5,40 @@ import music from '../assets/audio/Takeshi - Cafe Blue (Pour un Oui Ou Pour un N
 
 const Box = styled.div`
     display: flex;
+    flex-direction: column;
     cursor: pointer;
     position: fixed;
-    left: 9rem;
-    top: 3rem;
+    left: 9.5rem;
+    top: 2.5rem;
     z-index: 10;
+
+    p{
+        font-size: 14px;
+        color: ${({click_}) => click_ ? '#fff' : '#000'};
+        margin-bottom: 0.5rem;
+
+        padding: 0.1em;
+        width: 65px;
+        border-radius: 3px;
+    }
+`
+
+const Play = keyframes`
+    0%{
+        transform: scaleY(1);
+    }
+
+    50%{
+        transform: scaleY(2);
+    }
+
+    100%{
+        transform: scaleY(1);
+    }
+`
+
+const Span = styled.span`
+    display: flex;
 
     &>*:nth-child(1){
         animation-delay: 0.2s;
@@ -32,22 +61,8 @@ const Box = styled.div`
     }
 `
 
-const Play = keyframes`
-    0%{
-        transform: scaleY(1);
-    }
-
-    50%{
-        transform: scaleY(2);
-    }
-
-    100%{
-        transform: scaleY(1);
-    }
-`
-
 const Line = styled.span`
-    background-color: ${props => props.theme.text};
+    background-color: ${props => props.theme.text}; 
     border: 1px solid ${props => props.theme.body};
 
     animation: ${Play} 1s ease infinite;
@@ -57,7 +72,7 @@ const Line = styled.span`
     margin: 0 0.1rem;
 `
 
-const SoundBar = () => {
+const SoundBar = ({ click_ }) => {
 
     const ref = useRef(null);
     const [click, setClick] = useState(false);
@@ -74,12 +89,17 @@ const SoundBar = () => {
 
   return (
     <Box onClick={handleClick}>
+        <p style={click_? { color: "#fff", boxShadow: "1px 1px 3px #fff" } : { color: "#000", boxShadow: "1px 1px 3px #000" }}>
+            Music: {click ? "ON" : "OFF"}
+        </p>
+        <Span>
         <Line click={click} />
         <Line click={click} />
         <Line click={click} />
         <Line click={click} />
         <Line click={click} />
         <audio src={music} ref={ref} />
+        </Span>
     </Box>
   )
 }
