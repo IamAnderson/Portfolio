@@ -11,7 +11,7 @@ export const Work = [
     {
         id: 2,
         name: "Crypto Analytic",
-        description: "Crypto Analytic is used for getting information on crypto news and also retrieving details and stats of over a 100 cryptos. It is built on React and Redux.",
+        description: "Crypto Analytic is used for getting information on crypto stats. It is built on React and utilizes Redux.",
         tags: ["React  |  #Redux", "API", "Ant Designs", "Tailwind"],
 
         demo:"//crypto-analytic.vercel.app/",
@@ -20,8 +20,8 @@ export const Work = [
     {
         id:3,
         name:"Resturant Landing Page",
-        description:"It is build on React and styled-components and also got smooth scrolling attributes.",
-        tags:["react|"," CSS |"," JS|", "Animation"],
+        description:"It is built on React and styled-components and also got smooth scrolling attributes.",
+        tags:["react|"," CSS "," JS", "Animation"],
         
         demo:"//caffe-viola.vercel.app/",
         github:"//github.com/IamAnderson/CaffeViola"
