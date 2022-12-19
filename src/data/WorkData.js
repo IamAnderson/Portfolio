@@ -5,7 +5,7 @@ export const Work = [
         description: " A task schedule website with sign up and sign in authentication built with react and node js.",
         tags: ["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
 
-        demo:"//andytaskapp.herokuapp.com",
+        demo:"//andytaskapp.vercel.app",
         github:"//github.com/IamAnderson/TaskApp"
     },
     {
