@@ -14,7 +14,6 @@ const Box = styled.div`
 
     p{
         font-size: 14px;
-        color: ${({click_}) => click_ ? '#fff' : '#000'};
         margin-bottom: 0.5rem;
 
         padding: 0.1em;
