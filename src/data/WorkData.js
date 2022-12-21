@@ -5,7 +5,7 @@ export const Work = [
         description: " A task schedule website with sign up and sign in authentication built with react and node js.",
         tags: ["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
 
-        demo:"//andytaskapp.vercel.app",
+        demo:"//andytaskapp.vercel.app/",
         github:"//github.com/IamAnderson/TaskApp"
     },
     {
@@ -28,12 +28,12 @@ export const Work = [
     },
     {
         id: 4,
-        name: "Geoleum",
+        name: "Hans Energy",
         description: "A website for an engineering firm. The client side is built with react, while the API is built with node and express.",
         tags: ["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
 
-        demo:"//geoleum123.vercel.app",
-        github:"//github.com/IamAnderson/geoleum1"
+        demo:"//hansenergy.vercel.app/",
+        github:"//github.com/IamAnderson/Hans-Energy"
     },
     {
         id:5,
@@ -70,7 +70,7 @@ export const Work = [
         description:"A landing page for an AI company, built with React and framer motion for animation.",
         tags:["react", "JS", "styled-components", "Animation"],
         
-        demo:"//gpt-3-inky.vercel.app",
+        demo:"//gpt-3-inky.vercel.app/",
         github:"//github.com/IamAnderson/GPT3"
     },
 
@@ -80,7 +80,7 @@ export const Work = [
         description:"A landing page for a financial firm, which utilize smooth scroll for navigation.",
         tags:["react", "JS", "styled-components", "react-scroll"],
         
-        demo:"//dolla-nine.vercel.app",
+        demo:"//dolla-nine.vercel.app/",
         github:"//github.com/IamAnderson/Dolla"
     },  
 ] 
