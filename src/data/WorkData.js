@@ -20,7 +20,7 @@ export const Work = [
         {
         id: 3,
         name:"29",
-        description:"An Ecommerce website called 29, it utilize Redux for state management and it is built on React and Nodejs.",
+        description:"An Ecommerce website called 29, utilize Redux and it is built on React and Nodejs.",
         tags:["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
         
         demo:"//29e-commerce.vercel.app/",
