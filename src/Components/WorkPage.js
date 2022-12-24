@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import styled, { keyframes } from 'styled-components'
 import { ThemeProvider } from 'styled-components'
 import { darkTheme } from './Themes'
