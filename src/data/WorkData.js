@@ -20,11 +20,7 @@ export const Work = [
         {
         id: 3,
         name:"29",
-<<<<<<< HEAD
         description:"An Ecommerce website called 29, it utilize Redux for state management and it is built on React and Nodejs.",
-=======
-        description:"An Ecommerce website called 29. The client side is built on react and redux, while the server side is built with nodejs and express.",
->>>>>>> f32c81eac01bed76fc0a75892231bbe0f4770f60
         tags:["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
         
         demo:"//29e-commerce.vercel.app/",
@@ -42,11 +38,7 @@ export const Work = [
     {
         id: 5,
         name: "Hans Energy",
-<<<<<<< HEAD
         description: "A website for an engineering firm. The client side is built with React, while the API is built with Node and express.",
-=======
-        description: "A website for an engineering firm. The client side is built with react, while the API is built with node and express.",
->>>>>>> f32c81eac01bed76fc0a75892231bbe0f4770f60
         tags: ["React  |  #Redux","Node | #Express", "Mongodb", "styled-components"],
 
         demo:"//hansenergy.vercel.app/",
