@@ -1,9 +1,10 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 import { darkTheme } from '../Components/Themes'
 
 
-const Logo = styled.div`
+const Logo = styled(Link)`
     display: inline-block;
     color: ${({click}) => click ? '#fff' : '#000'};
     font-family: 'Pacifico', cursive;
@@ -20,7 +21,7 @@ const Logo = styled.div`
 
 const LogoComponent = ({ click }) => {
   return (
-    <Logo click={click}>
+    <Logo to="/" reloadDocument click={click}>
         ANDY
     </Logo>
   )
