@@ -10,6 +10,7 @@ const Logo = styled(Link)`
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
     font-weight: 700;
+    text-decoration: none;
     position: fixed;
     left: 2rem;
     top: 2rem;
