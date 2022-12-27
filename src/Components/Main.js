@@ -39,15 +39,15 @@ const Contact = styled.div`
 `
 
 
-const Blog = styled(NavLink)`
-  color: ${props => props.theme.text};
-  position: absolute;
-  top: 50%;
-  right: calc(1rem + 2vw);
-  z-index: 1;
-  transform: rotate(90deg) translate(-50%, -50%);
-  text-decoration: none;
-`
+// const Blog = styled(NavLink)`
+//   color: ${props => props.theme.text};
+//   position: absolute;
+//   top: 50%;
+//   right: calc(1rem + 2vw);
+//   z-index: 1;
+//   transform: rotate(90deg) translate(-50%, -50%);
+//   text-decoration: none;
+// `
 
 const Work = styled(NavLink)`
   color: ${props => props.click ? props.theme.body : props.theme.text};

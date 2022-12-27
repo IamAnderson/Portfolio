@@ -10,6 +10,7 @@ import ParticleComponent from '../subComponents/ParticleComponent'
 import Astronaut from '../assets/Images/spaceman.png'
 import { keyframes } from 'styled-components'
 import BigTitle from '../subComponents/BigTitle'
+import { Link } from 'react-router-dom'
 
 
 const Box = styled.div`
@@ -21,6 +22,11 @@ const Box = styled.div`
 `
 
 const Main = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
   border: 2px solid ${props => props.theme.text};
   color: ${props => props.theme.text};
   padding: 2rem;
@@ -31,9 +37,9 @@ const Main = styled.div`
   
   font-family: monospace;
   font-style: italic;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
   font-size: calc(0.65rem + 1vw);
   backdrop-filter: blur(4px);
   cursor: pointer;
@@ -85,13 +91,13 @@ const AboutPage = () => {
         <Main>
         I'm a full stack developer ( MERN ) from Nigeria. I love creating websites while keeping codes organized and simple.
         <br /> <br /> 
-        I very much enjoy the process of web creation, especially the aspect that deals with user experience. I love discovering new things, and exploring new experiences. 
+        I very much enjoy the process of web creation, regardless of client or server side. I love discovering new things, and exploring new experiences. 
         <br /> <br />
-        You can connect with me via social links.
+        You can connect with me via social links or the <span><Link to="/SayHi" style={{ color: "#fff" }}>"say hi.."</Link> link.</span> 
         </Main>
 
         <SpaceMan>
-          <img src={Astronaut} alt='Astronaut' />
+          <img src={Astronaut} alt="" />
         </SpaceMan>
       </Box>
     </ThemeProvider>

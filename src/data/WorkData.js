@@ -28,9 +28,9 @@ export const Work = [
     },
     {
         id: 4,
-        name:"Resturant Landing Page",
-        description:"It is built on React and styled-components and also got smooth scrolling attributes.",
-        tags:["React|"," CSS "," JS", "Animation"],
+        name:"Caffè Viola",
+        description:"A resturant site built on React and styled-components and also got smooth scrolling attributes.",
+        tags:["React"," CSS "," JS", "Animation"],
         
         demo:"//caffe-viola.vercel.app/",
         github:"//github.com/IamAnderson/CaffeViola"

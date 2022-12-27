@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import styled from 'styled-components'
-import { darkTheme } from '../Components/Themes'
 
 
 const Logo = styled(Link)`
@@ -16,7 +15,7 @@ const Logo = styled(Link)`
     top: 2rem;
     z-index: 3;
 
-    cursor: default;
+    cursor: pointer;
 `
 
 

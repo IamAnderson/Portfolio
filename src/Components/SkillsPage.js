@@ -50,7 +50,7 @@ const Main = styled.div`
 const Title = styled.h2`
   display: flex;
   justify-content: cenetr;
-  align-items: center;
+  align-items: flex-start;
   font-size: calc(1em + 1vw);
 
   ${Main} :hover &{
@@ -100,7 +100,7 @@ const SkillsPage = () => {
 
         <Main>
         <Title>
-          <Develope width={40} height={40} /> FrontEnd Developer
+          <Develope width={40} height={40} /> Full-Stack Developer
         </Title>
         
         <Description>
@@ -112,15 +112,15 @@ const SkillsPage = () => {
             Skills
           </h3>
 
-          <p style={{marginLeft: '2rem'}}>HTML / CSS | JavaScript | TypeScript | React | Redux | Styled-Components | SASS | Tailwind</p>
+          <p style={{marginLeft: '2rem'}}>HTML / XHTML / CSS | JavaScript ES6 | React | NextJs | Redux | NodeJs / Express | Context Api | Tailwind | Styled-Components</p>
         </Description>
 
         <SkillS>
           <h3 style={{fontWeight: '600', marginBottom: '1rem', textTransform: 'uppercase'}}>
-            Tools
+            Source Control & DB
           </h3>
 
-          <p style={{marginLeft: '2rem'}}>VsCode, Github, etc.</p>
+          <p style={{marginLeft: '2rem'}}>Git, Github, MongoDB, PostgreSQL</p>
         </SkillS>
         </Main>
       </Box>
