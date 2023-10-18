@@ -61,13 +61,13 @@ const Tag = styled.span`
     padding-right: 0.5rem;
 `
 
-const Date = styled.span`
-    padding: 0.5rem 0;
-`
+// const Date = styled.span`
+//     padding: 0.5rem 0;
+// `
 
 const BlogComponent = (props) => {
 
-    const {name, tags, date, imgSrc, link} = props.blog;
+    const {name, tags, imgSrc, link} = props.blog;
 
   return (
     <Box target='_blank' to={{Pathname: link}}>
